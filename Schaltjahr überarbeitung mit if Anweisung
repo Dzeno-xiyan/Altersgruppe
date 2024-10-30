@@ -44,7 +44,7 @@ public class Tage {
             }
 
             System.out.printf("Der Monat %d im Jahr %d hat %d Tage.%n", monat, jahr, tage);
-            if (istSchaltjahr) {
+            if (monat == 2 && istSchaltjahr) {
                 System.out.println("Das Jahr " + jahr + " ist ein Schaltjahr.");
             } else {
                 System.out.println("Das Jahr " + jahr + " ist kein Schaltjahr.");
