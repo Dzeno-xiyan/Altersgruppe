@@ -13,7 +13,7 @@ public class Tage {
             int jahr = scanner.nextInt();
 
             while (jahr <= 0) {
-                System.out.println("Bitte geben Sie ein positives Jahr ein:");
+                System.out.println("Jahr:");
                 jahr = scanner.nextInt();
             }
 
@@ -21,7 +21,7 @@ public class Tage {
             int monat = scanner.nextInt();
 
             while (monat < 1 || monat > 12) {
-                System.out.println("Bitte geben Sie einen gültigen Monat (1-12) ein:");
+                System.out.println("Alien?:");
                 monat = scanner.nextInt();
             }
 
@@ -39,7 +39,7 @@ public class Tage {
                     tage = istSchaltjahr ? 29 : 28;
                     break;
                 default:
-                    System.out.println("Ungültige Eingabe für den Monat!");
+                    System.out.println("Komm schon nur 1 bis 12!");
                     return;
             }
 
@@ -50,7 +50,7 @@ public class Tage {
                 System.out.println("Das Jahr " + jahr + " ist kein Schaltjahr.");
             }
 
-            System.out.print("Möchten Sie fortfahren? (j/n): ");
+            System.out.print("Weiter? (j/n): ");
             String Antwort = scanner.next();
             weitermachen = Antwort.equalsIgnoreCase("j");
         }
