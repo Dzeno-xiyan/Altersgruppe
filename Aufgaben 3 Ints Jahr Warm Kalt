@@ -1,0 +1,64 @@
+package Scanner;
+
+/*public class Monatkaltwarm {
+    public static void main(String[] args) {
+        int zahl1 = 10;
+        int zahl2 = 15;
+        int zahl3 = 19;
+
+        int gWert = gZahl(zahl1, zahl2, zahl3);
+        System.out.println("Der größte Wert ist: " + gWert);
+    }
+
+    public static int gZahl(int a, int b, int c) {
+        int max = a;
+        if (b > max) {
+            max = b;
+        }
+        if (c > max) {
+            max = c;
+        }
+        return max;
+    }
+}*/
+public class Monatkaltwarm {
+    public static void main(String[] args) {
+        int monat = 10; // Juni
+        double temperatur = 28.5;
+        String jahreszeit = getJahreszeit(monat);
+
+        String temp = temperatur >= Monate(jahreszeit) ? "warm" : "kalt";
+        System.out.println("Der " + getMonatsName(monat) + " ist mit " + temperatur + "°C für diese " + jahreszeit + " relativ " + temp);
+    }
+
+    public static String getJahreszeit(int monat) {
+        switch (monat) {
+            case 3, 4, 5:
+                return "Frühling";
+            case 6, 7, 8:
+                return "Sommer";
+            case 9, 10, 11:
+                return "Herbst";
+            default:
+                return "Winter";
+        }
+    }
+
+    public static double Monate(String jahreszeit) {
+        switch (jahreszeit) {
+            case "Frühling":
+                return 20;
+            case "Sommer":
+                return 25;
+            case "Herbst":
+                return 15;
+            default:
+                return 5;
+        }
+    }
+
+    public static String getMonatsName(int monat) {
+        String[] monatsNamen = {"Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"};
+        return monatsNamen[monat - 1];
+    }
+}
