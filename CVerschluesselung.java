@@ -7,7 +7,7 @@ public class Cverschluesselung {
     public static String verschluesseln(String text, int verschiebung) {
         StringBuilder verschluesselterText = new StringBuilder();
 
-        // Alphabet 
+        // Alphabet ausgeben
         for (char c = 'A'; c <= 'Z'; c++) {
             System.out.print(c);
         }
@@ -35,7 +35,7 @@ public class Cverschluesselung {
     }
 
     public static void main(String[] args) {
-        String originalText = "Endlich wieder bei Herr Müller!";
+        String originalText = "Endlich wieder bei Herr Müller! ZYZ";
         int verschiebung = 1; // um wieviele stellen schieben
         String verschluesselterText = verschluesseln(originalText, verschiebung);
         System.out.println("Original: " + originalText);
