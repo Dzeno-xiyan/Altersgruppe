@@ -108,3 +108,57 @@ Instanz-von: instanceof
 
 
   -----------------------------------------------------------------------------------------------------------------
+
+Gegeben: a = 4, b = 1
+
+Ausdruck 1: (a < 5) || (a > 6)
+(4 < 5) ist wahr (true)
+(4 > 6) ist falsch (false)
+ODER (||) bedeutet, dass mindestens einer der Ausdrücke wahr sein muss, damit der gesamte Ausdruck wahr ist.
+Ergebnis: wahr (true)
+Ausdruck 2: (a == 3) ^ (2 == b)
+(4 == 3) ist falsch (false)
+(2 == 1) ist falsch (false)
+XOR (^) bedeutet, dass genau einer der Ausdrücke wahr sein muss, damit der gesamte Ausdruck wahr ist.
+Ergebnis: falsch (false)
+Ausdruck 3: (b >1) && (a > 3)
+(1 > 1) ist falsch (false)
+(4 > 3) ist wahr (true)
+UND (&&) bedeutet, dass beide Ausdrücke wahr sein müssen, damit der gesamte Ausdruck wahr ist.
+Ergebnis: falsch (false)
+Ausdruck 4: (a + b < 19) && (b < 1)
+(4 + 1 < 19) ist wahr (true)
+(1 < 1) ist falsch (false)
+UND (&&) bedeutet, dass beide Ausdrücke wahr sein müssen, damit der gesamte Ausdruck wahr ist.
+Ergebnis: falsch (false)
+Ausdruck 5: (3 < 5) && (3 > 5)
+(3 < 5) ist wahr (true)
+(3 > 5) ist falsch (false)
+UND (&&) bedeutet, dass beide Ausdrücke wahr sein müssen, damit der gesamte Ausdruck wahr ist.
+Ergebnis: falsch (false)
+Ausdruck 6: ((3 < 5) && (a > 3)) ^ (b == 1)
+(3 < 5) ist wahr (true)
+(4 > 3) ist wahr (true)
+(1 == 1) ist wahr (true)
+Innerer Ausdruck: (true && true) ist wahr
+Gesamtausdruck: wahr ^ wahr ist falsch (false)
+Ergebnis: falsch (false)
+Zusammenfassung der Ergebnisse:
+
+Ausdruck	Wert
+(a < 5)	(a > 6)
+(a == 3) ^ (2 == b)	falsch
+(b >1) && (a > 3)	falsch
+(a + b < 19) && (b < 1)	falsch
+(3 < 5) && (3 > 5)	falsch
+((3 < 5) && (a > 3)) ^ (b == 1)	falsch
+
+In Google Sheets exportieren
+Wichtige logische Operatoren:
+
+&& (UND): Beide Ausdrücke müssen wahr sein.
+|| (ODER): Mindestens ein Ausdruck muss wahr sein.
+^ (XOR): Genau einer der Ausdrücke muss wahr sein.
+Hinweis: Die Klammern in Ausdruck 6 sind wichtig, um die Auswertungskette zu bestimmen.
+
+  
