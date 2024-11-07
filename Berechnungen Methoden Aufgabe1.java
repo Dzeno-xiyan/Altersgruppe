@@ -46,7 +46,7 @@ public class BerechnungenMethoden {
 
     public static void berechneQuotient(double a, double b) {
         if (b == 0) {
-            System.out.println("Division durch Null ist nicht erlaubt!");
+            System.out.println("Division durch Null?");
         } else {
             double quotient = a / b;
             System.out.println("Der Quotient ist: " + quotient);
@@ -103,8 +103,8 @@ public class BerechnungenMethoden {
 
     public static double berechneQuotient(double a, double b) {
         if (b == 0) {
-            System.out.println("Division durch Null ist nicht erlaubt!");
-            return Double.NaN; // Gibt "NaN" (Not a Number) zurück
+            System.out.println("Division durch Null?");
+            return Double.NaN; // Keine gültige Nummer
         } else {
             return a / b;
         }
