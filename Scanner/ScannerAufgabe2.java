@@ -1,13 +1,15 @@
 package Scanner;
 
-
-import java.util.Scanner;
+import java.util.*;
 
 public class ScannerAufgabe2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Eingabe der Daten
+       
+        scanner.useLocale(Locale.GERMANY);
+
+        
         System.out.print("Anzahl der Artikel: ");
         int anzahlArtikel = scanner.nextInt();
 
@@ -17,11 +19,11 @@ public class ScannerAufgabe2 {
         System.out.print("Bezahlter Betrag: ");
         double bezahlterBetrag = scanner.nextDouble();
 
-        // Berechnung des Gesamtpreises und des Restgelds
+        
         double gesamtpreis = anzahlArtikel * preisProArtikel;
         double restgeld = bezahlterBetrag - gesamtpreis;
 
-        // Ausgabe der Ergebnisse
+        
         System.out.println("Gesamtpreis: " + gesamtpreis + " €");
         System.out.println("Restgeld: " + restgeld + " €");
         scanner.close();
