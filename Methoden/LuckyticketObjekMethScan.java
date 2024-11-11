@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LuckyObjekMethoScanner {
 
     public static boolean isLucky(int ticketNumber) {
-        // Umwandlung der Zahl in einen String für eine einfachere Bearbeitung
+        // Umwandlung Zahl in String
         String ticketString = String.valueOf(ticketNumber);
 
         // Überprüfung, geradee oder ungerade
