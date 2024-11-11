@@ -13,7 +13,7 @@ public class Auto {
         this.farbe = farbe;
         this.baujahr = baujahr;
         this.modell = modell;
-        this.kilometerstand = 22; 
+        this.kilometerstand = 0; 
     }
 
     // Methoden
@@ -41,6 +41,16 @@ public class Auto {
         kilometerstand += kilometer;
         System.out.println("Das Auto ist " + kilometer + " Kilometer gefahren.");
     }
+
+	public void rollt() {
+		System.out.println("Das Auto ist am Rollen");
+		
+	}
+
+	public void fliegt() {
+		System.out.println("Flieg Flieg Flieg \n");
+		
+	}
     
     
     
