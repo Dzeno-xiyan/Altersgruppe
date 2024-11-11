@@ -3,12 +3,13 @@ package Scanner;
 public class autotestttt {
     public static void main(String[] args) {
         
-        Auto meinAuto = new Auto("Rot", 2022, "Tesla Model 3");
+        Auto meinAuto = new Auto("Rot", 1976, "Kaefer");
 
         
         meinAuto.faehrt();
         meinAuto.steht();
-        meinAuto.beschreibeDich();
+        meinAuto.rollt();
+        meinAuto.fliegt();
 
         
         int aktuellesJahr = 2023;
