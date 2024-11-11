@@ -23,7 +23,10 @@ public class ScannerAufgabe2 {
         double gesamtpreis = anzahlArtikel * preisProArtikel;
         double restgeld = bezahlterBetrag - gesamtpreis;
 
-        
+
+        //System.out.printf("Gesamtpreis: %.2f €%n", gesamtpreis);
+        //System.out.printf("Restgeld: %.2f €%n", restgeld);
+        //
         System.out.println("Gesamtpreis: " + gesamtpreis + " €");
         System.out.println("Restgeld: " + restgeld + " €");
         scanner.close();
