@@ -13,41 +13,57 @@ Beispiel:
 
 package Scanner;
 
-
 import java.util.Scanner;
 
+
+
 public class Coordinaten {
-    public static void main(String[] args) {
+    public static boolean istAmStart(String bewegungsfolge) {
         int x = 0;
         int y = 0;
-        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < 6; i++) {
-            System.out.print("Gib die nächste Richtung ein (N, S, O, W): ");
-            String richtung = scanner.nextLine().toLowerCase();
-
-            switch (richtung) {
-                case "n":
+        for (char bewegung : bewegungsfolge.toLowerCase().toCharArray()) {
+            switch (bewegung) {
+                case 'n':
                     y++;
                     break;
-                case "s":
+                case 's':
                     y--;
                     break;
-                case "o":
+                case 'o':
                     x++;
                     break;
-                case "w":
+                case 'w':
                     x--;
                     break;
                 default:
-                    System.out.println("Ungültige Richtung!");
+                    System.out.println("Ungültige Bewegungsrichtung: " + bewegung);
             }
         }
 
-        if (x == 0 && y == 0) {
+        return x == 0 && y == 0;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Wie viele Schritte möchtes du gehen? ");
+        int anzahlZuege = scanner.nextInt();
+
+        String bewegungsfolge = "";
+        for (int i = 0; i < anzahlZuege; i++) {
+            System.out.print("Gib die nächste RIchtung ein (N, S, O, W): ");
+            bewegungsfolge += scanner.next().toLowerCase();
+            
+        }
+
+        boolean amStart = istAmStart(bewegungsfolge);
+
+        if (amStart) {
             System.out.println("Der Spieler ist am Startpunkt (0, 0).");
         } else {
-            System.out.println("Der Spieler ist bei den Koordinaten (" + x + ", " + y + ").");
+            System.out.println("Der Spieler ist nicht am Startpunkt.");
+           
         }
     }
 }
